@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FINDIMO - Alojamiento Estudiantil en Lima</title>
+  <meta name="description" content="FINDIMO es la plataforma para que estudiantes universitarios en Lima encuentren alojamiento con datos claros de ubicacion, precio y seguridad." />
+  <meta name="theme-color" content="#18b5a4" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="header" id="header">
+    <div class="container header__row">
+      <a href="#" class="brand" aria-label="FINDIMO inicio">
+        <img src="imagenes/logo.png" alt="FINDIMO" class="logo" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#problema">Problema</a>
+        <a href="#solucion">Solucion</a>
+        <a href="#caracteristicas-clave">Caracteristicas</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#contacto" class="btn btn--brand">Empezar</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-controls="nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__wrap">
+      <!-- Texto -->
+      <div class="reveal">
+        <span class="eyebrow">Alojamiento inteligente para estudiantes</span>
+        <h1>Encuentra, compara y decide tu alojamiento en Lima con datos reales.</h1>
+        <p class="sub">
+          Qué hace: centraliza habitaciones y residencias con mapas, precios y filtros claros.
+          Para quién: estudiantes universitarios que llegan o viven en Lima.
+          Por qué importa: reduces tiempo y riesgo al decidir con información confiable y verificada.
+        </p>
+        <ul class="bullets" id="como-funciona">
+          <li><span class="dot"></span><span>Busca por distrito, universidad o tiempo de traslado.</span></li>
+          <li><span class="dot"></span><span>Compara precio total estimado, servicios incluidos y seguridad de la zona.</span></li>
+          <li><span class="dot"></span><span>Guarda favoritos y postula con un clic.</span></li>
+        </ul>
+        <div class="hero__cta">
+          <a href="#caracteristicas-clave" class="btn btn--brand pulse">Explorar opciones</a>
+          <a href="#contacto" class="btn btn--ghost open-contact">Hablar con el equipo</a>
+        </div>
+      </div>
+      <!-- Media -->
+      <figure class="hero__card reveal" aria-label="Estudiantes revisando opciones de alojamiento">
+        <div class="hero__media">
+          <img src="imagenes/2.jpg" alt="Estudiantes colaborando frente a una computadora" />
+        </div>
+        <div class="hero__note">
+          <p>Resultados claros. Decisiones más seguras.</p>
+          <a href="#caracteristicas-clave" class="btn btn--brand">Ver cómo</a>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS CARRUSEL -->
+  <section class="reviews" id="testimonios">
+    <div class="container">
+      <div class="reviews__head">
+        <h2 class="reveal">Historias reales de estudiantes y arrendadores</h2>
+        <p class="lead reveal">Lo que dicen quienes ya usan FINDIMO.</p>
+
+        <div class="tabs" role="tablist" aria-label="Tipo de testimonios">
+          <button class="tab is-active" data-target="#carousel-estudiantes" role="tab" aria-selected="true">Estudiantes</button>
+          <button class="tab" data-target="#carousel-arrendadores" role="tab" aria-selected="false">Arrendadores</button>
+        </div>
+      </div>
+
+      <!-- Carrusel: Estudiantes -->
+      <div class="carousel-container is-visible" id="carousel-estudiantes" role="tabpanel" aria-label="Testimonios de estudiantes">
+        <div class="carousel-track" id="track-estudiantes">
+          <!-- Tarjetas de estudiantes -->
+          <article class="card">
+            <img src="imagenes/6.jpg" class="photo" alt="Estudiante sonriendo">
+            <div class="body">
+              <div class="meta"><strong>Camila, 19</strong><small>UPC · De Cusco</small></div>
+              <p class="quote">"Encontré cuarto cerca del campus con tiempos reales. Ahorro 30 minutos diarios y pago lo justo."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/7.jpg" alt="Estudiante con mascarilla en pasillo de universidad" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Mario, 22</strong><small>PUCP · Villa El Salvador</small></div>
+              <p class="quote">"Los mapas de seguridad me dieron tranquilidad. Elegí una zona recomendada por otros alumnos."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/9.jpg" alt="Estudiante sonriendo en un campus" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Joh, 21</strong><small>UNI · De Piura</small></div>
+              <p class="quote">"Guardé favoritos y postulé en un clic. Me confirmaron visita el mismo día."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/4.jpg" alt="Estudiante sonriendo en un campus" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Mariela, 20</strong><small>USIL · De Loreto</small></div>
+              <p class="quote">"Comparé precio total con servicios incluidos. Evité gastos ocultos y cerré rápido."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/13.jpg" alt="Estudiante con mochila frente a edificio" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Sebastian, 22</strong><small>UPC · De Tumbes</small></div>
+              <p class="quote">"Con los filtros avanzados cree alertas por distrito y me avisó cuando salió algo en mi presupuesto. Visité 2 lugares."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+          
+          <!-- Duplicado para efecto infinito -->
+          <article class="card">
+            <img src="imagenes/6.jpg" class="photo" alt="Estudiante sonriendo">
+            <div class="body">
+              <div class="meta"><strong>Camila, 19</strong><small>UPC · De Cusco</small></div>
+              <p class="quote">"Encontré cuarto cerca del campus con tiempos reales. Ahorro 30 minutos diarios y pago lo justo."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/7.jpg" alt="Estudiante con mascarilla en pasillo de universidad" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Mario, 22</strong><small>PUCP · Villa El Salvador</small></div>
+              <p class="quote">"Los mapas de seguridad me dieron tranquilidad. Elegí una zona recomendada por otros alumnos."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/9.jpg" alt="Estudiante sonriendo en un campus" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Joh, 21</strong><small>UNI · De Piura</small></div>
+              <p class="quote">"Guardé favoritos y postulé en un clic. Me confirmaron visita el mismo día."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/4.jpg" alt="Estudiante sonriendo en un campus" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Mariela, 20</strong><small>USIL · De Loreto</small></div>
+              <p class="quote">"Comparé precio total con servicios incluidos. Evité gastos ocultos y cerré rápido."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/13.jpg" alt="Estudiante con mochila frente a edificio" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Sebastian, 22</strong><small>UPC · De Tumbes</small></div>
+              <p class="quote">"Con los filtros avanzados cree alertas por distrito y me avisó cuando salió algo en mi presupuesto. Visité 2 lugares."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Carrusel: Arrendadores -->
+      <div class="carousel-container" id="carousel-arrendadores" role="tabpanel" aria-label="Testimonios de arrendadores">
+        <div class="carousel-track" id="track-arrendadores">
+          <!-- Tarjetas de arrendadores -->
+          <article class="card">
+            <img src="imagenes/8.jpg" alt="Propietaria sonriendo en su inmueble" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Marcos, 48</strong><small>San Miguel</small></div>
+              <p class="quote">"Postulaciones de alumnos verificados y perfil claro. Publiqué y llené rápido."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/10.jpg" alt="Pareja de arrendadores felices en su patio" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Carlos y Ana, 60</strong><small>Pueblo Libre</small></div>
+              <p class="quote">"La plataforma evita estafas y preguntas repetidas. Todo claro desde el inicio."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/5.jpg" alt="Arrendador con camisa de jean posando" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Adriana, 54</strong><small>Los Olivos</small></div>
+              <p class="quote">"El filtro por universidad trajo interesados cercanos al campus. Llené dos habitaciones en una semana."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/12.jpg" alt="Arrendadora revisando mensajes de postulantes" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Patricia, 42</strong><small>Breña</small></div>
+              <p class="quote">"Los postulantes llegan con perfil completo y verificación. Menos coordinación por WhatsApp y cero no-shows."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/11.jpg" alt="Joven arrendador con mochila sonriendo" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Marcos, 34</strong><small>Miraflores</small></div>
+              <p class="quote">"Publicación simple, cobro claro y soporte por WhatsApp. Gestión 10/10."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+          
+          <!-- Duplicado para efecto infinito -->
+          <article class="card">
+            <img src="imagenes/8.jpg" alt="Propietaria sonriendo en su inmueble" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Marcos, 48</strong><small>San Miguel</small></div>
+              <p class="quote">"Postulaciones de alumnos verificados y perfil claro. Publiqué y llené rápido."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/10.jpg" alt="Pareja de arrendadores felices en su patio" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Carlos y Ana, 60</strong><small>Pueblo Libre</small></div>
+              <p class="quote">"La plataforma evita estafas y preguntas repetidas. Todo claro desde el inicio."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/5.jpg" alt="Arrendador con camisa de jean posando" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Adriana, 54</strong><small>Los Olivos</small></div>
+              <p class="quote">"El filtro por universidad trajo interesados cercanos al campus. Llené dos habitaciones en una semana."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/12.jpg" alt="Arrendadora revisando mensajes de postulantes" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Patricia, 42</strong><small>Breña</small></div>
+              <p class="quote">"Los postulantes llegan con perfil completo y verificación. Menos coordinación por WhatsApp y cero no-shows."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="imagenes/11.jpg" alt="Joven arrendador con mochila sonriendo" class="photo">
+            <div class="body">
+              <div class="meta"><strong>Marcos, 34</strong><small>Miraflores</small></div>
+              <p class="quote">"Publicación simple, cobro claro y soporte por WhatsApp. Gestión 10/10."</p>
+              <div class="rating" aria-label="5 de 5">★★★★★</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EL PROBLEMA -->
+  <section class="problem" id="problema">
+    <div class="container">
+      <h2 class="reveal">Los problemas de buscar alojamiento en Lima</h2>
+      <p class="lead reveal">
+        Si eres estudiante que llega a Lima o un arrendador que busca inquilinos,
+        seguramente te identificas con estas dificultades:
+      </p>
+
+      <div class="grid-3">
+        <article class="problem-card reveal">
+          <h3>Falta de información clara</h3>
+          <p>No sabes si el precio incluye servicios, internet o seguridad. Muchas veces descubres gastos ocultos después de mudarte.</p>
+        </article>
+
+        <article class="problem-card reveal">
+          <h3>Pérdida de tiempo</h3>
+          <p>Buscar en grupos de Facebook o recorrer distritos sin referencias confiables consume horas y genera frustración.</p>
+        </article>
+
+        <article class="problem-card reveal">
+          <h3>Inseguridad y estafas</h3>
+          <p>Arrendadores informales, habitaciones sin condiciones mínimas o fotos que no corresponden al lugar real.</p>
+        </article>
+
+        <article class="problem-card reveal">
+          <h3>Dificultad para comparar</h3>
+          <p>Los anuncios están dispersos y no puedes calcular el costo total ni el tiempo de traslado a tu universidad.</p>
+        </article>
+
+        <article class="problem-card reveal">
+          <h3>Falta de confianza mutua</h3>
+          <p>Los arrendadores dudan de los estudiantes, y los estudiantes no saben si confiar en los dueños. No hay un filtro confiable.</p>
+        </article>
+
+        <article class="problem-card reveal">
+          <h3>Procesos complicados</h3>
+          <p>Agendar visitas y coordinar detalles por mensajes sueltos en WhatsApp genera confusión y retrasos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA SOLUCION -->
+  <section class="solution" id="solucion">
+    <div class="container solution__wrap">
+      <div class="solution__text">
+        <h2 class="reveal">La solucion: FINDIMO</h2>
+        <p class="lead reveal">
+          Reunimos en un solo lugar habitaciones y residencias verificadas
+          cerca de tu universidad, con precios claros, tiempos de traslado
+          y herramientas que simplifican todo el proceso.
+        </p>
+
+        <ul class="benefits">
+          <li class="benefit reveal">
+            <span class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7L9 18l-5-5" stroke="#0b8f82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Mapas con <strong>tiempos reales</strong> hacia tu campus.
+          </li>
+          <li class="benefit reveal">
+            <span class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7L9 18l-5-5" stroke="#0b8f82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <strong>Precios transparentes</strong> (incluye servicios y condiciones).
+          </li>
+          <li class="benefit reveal">
+            <span class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7L9 18l-5-5" stroke="#0b8f82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Perfiles y <strong>reseñas verificadas</strong> para más seguridad.
+          </li>
+          <li class="benefit reveal">
+            <span class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7L9 18l-5-5" stroke="#0b8f82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <strong>Postula y agenda</strong> visitas en un clic.
+          </li>
+        </ul>
+      </div>
+
+      <figure class="solution__media reveal">
+        <img src="imagenes/20.jpg" alt="Vista de la plataforma FINDIMO mostrando mapa, precios y detalles del alojamiento">
+      </figure>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
