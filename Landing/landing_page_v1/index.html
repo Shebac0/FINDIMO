@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FINDIMO – Hero</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0f172a;
+      --font-sans:'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      --font-display:'Poppins','Inter',ui-sans-serif;
+      --muted:#64748b;
+      --line:#e2e8f0;
+      --brand:#18b5a4;
+      --brand-600:#0ea89a;
+      --brand-700:#0b8f82;
+      --brand-50:#ebfffc;
+      --surface:#ffffffcc;
+      --shadow:0 10px 30px rgba(2,6,23,.08);
+      --radius:16px;
+      --container:1200px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:var(--font-sans);
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.55;
+    }
+
+    .container{
+      max-width:var(--container);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* HEADER */
+    .header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      width:100%;
+      backdrop-filter:saturate(120%) blur(8px);
+      background:var(--surface);
+      border-bottom:1px solid rgba(15,23,42,.06);
+    }
+
+    .header__row{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:12px;
+      align-items:center;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+    }
+
+    .brand .logo{
+      height:72px;
+      width:auto;
+      transition:transform .35s cubic-bezier(.2,.9,.2,1);
+    }
+
+    .brand .logo:hover{
+      transform:translateY(-3px) scale(1.02);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      justify-self:end;
+    }
+
+    .nav a{
+      color:var(--muted);
+      font-weight:500;
+      padding:10px 12px;
+      border-radius:10px;
+      text-decoration:none;
+    }
+
+    .nav a:hover{
+      color:var(--text);
+      background:#f8fafc;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 16px;
+      border-radius:12px;
+      font-weight:600;
+      text-decoration:none;
+      border:none;
+      cursor:pointer;
+      transition:transform .05s ease, background .2s ease;
+    }
+
+    .btn:active{
+      transform:translateY(1px);
+    }
+
+    .btn--brand{
+      background:var(--brand);
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .btn--brand:hover{
+      background:var(--brand-600);
+    }
+
+    .btn--ghost{
+      border:1px solid var(--line);
+      color:#0f172a;
+      background:#fff;
+    }
+
+    .btn--ghost:hover{
+      background:#f8fafc;
+    }
+
+    /* HERO */
+    .hero{
+      padding:40px 0 24px;
+    }
+
+    .hero__wrap{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      align-items:center;
+      gap:28px;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      font-size:14px;
+      font-weight:700;
+      letter-spacing:.02em;
+      color:var(--brand-700);
+      background:var(--brand-50);
+      padding:6px 10px;
+      border-radius:999px;
+      margin-bottom:12px;
+    }
+
+    .hero h1{
+      font-size:clamp(30px,5.4vw,52px);
+      line-height:1.08;
+      margin-bottom:12px;
+      font-family:var(--font-display);
+      letter-spacing:-0.02em;
+    }
+
+    .hero .sub{
+      color:var(--muted);
+      font-size:clamp(16px,2.5vw,18px);
+      margin-bottom:18px;
+    }
+
+    .hero .bullets{
+      display:grid;
+      gap:6px;
+      margin:14px 0 6px;
+      color:#0f172a;
+      list-style:none;
+    }
+
+    .hero .bullets li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .hero .dot{
+      margin-top:9px;
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--brand);
+      flex-shrink:0;
+    }
+
+    .hero__cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+
+    .hero__card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:#fff;
+    }
+
+    .hero__media{
+      aspect-ratio:16/12;
+      background:#f1f5f9;
+      overflow:hidden;
+    }
+
+    .hero__media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      border-radius:12px 12px 0 0;
+    }
+
+    .hero__note{
+      padding:12px 14px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+    }
+
+    .hero__note p{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media (max-width:900px){
+      .hero__wrap{
+        grid-template-columns:1fr;
+      }
+      .header__row{
+        grid-template-columns:auto;
+        justify-items:space-between;
+      }
+      .nav{
+        display:none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__row">
+      <a href="#" class="brand" aria-label="FINDIMO inicio">
+        <!-- Cambia la ruta del logo según tu proyecto -->
+        <img src="imagenes/logo.png" alt="FINDIMO" class="logo" />
+      </a>
+
+      <nav class="nav">
+        <a href="#problema">Problema</a>
+        <a href="#solucion">Solución</a>
+        <a href="#caracteristicas-clave">Características</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#contacto" class="btn btn--brand">Empezar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__wrap">
+      <!-- Texto -->
+      <div>
+        <span class="eyebrow">Alojamiento inteligente para estudiantes</span>
+        <h1>Encuentra, compara y decide tu alojamiento en Lima con datos reales.</h1>
+        <p class="sub">
+          Qué hace: centraliza habitaciones y residencias con mapas, precios y filtros claros.
+          Para quién: estudiantes universitarios que llegan o viven en Lima.
+          Por qué importa: reduces tiempo y riesgo al decidir con información confiable y verificada.
+        </p>
+        <ul class="bullets" id="como-funciona">
+          <li><span class="dot"></span><span>Busca por distrito, universidad o tiempo de traslado.</span></li>
+          <li><span class="dot"></span><span>Compara precio total estimado, servicios incluidos y seguridad de la zona.</span></li>
+          <li><span class="dot"></span><span>Guarda favoritos y postula con un clic.</span></li>
+        </ul>
+        <div class="hero__cta">
+          <a href="#caracteristicas-clave" class="btn btn--brand">Explorar opciones</a>
+          <a href="#contacto" class="btn btn--ghost">Hablar con el equipo</a>
+        </div>
+      </div>
+
+      <!-- Imagen -->
+      <figure class="hero__card" aria-label="Estudiantes revisando opciones de alojamiento">
+        <div class="hero__media">
+          <!-- Cambia la ruta según tu proyecto -->
+          <img src="imagenes/2.jpg" alt="Estudiantes colaborando en computadoras" />
+        </div>
+        <div class="hero__note">
+          <p>Resultados claros. Decisiones más seguras.</p>
+          <a href="#caracteristicas-clave" class="btn btn--brand" style="padding:8px 12px;">Ver cómo</a>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+</body>
+</html>
